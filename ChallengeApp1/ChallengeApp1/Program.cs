@@ -1,35 +1,16 @@
-﻿
+﻿string name = "Ewa";
+int age = 30;
+bool isWoman = true;
 
-// ==
-// !=
-// >
-// <
-// <=
-// >=
-
-
-// && i 
-// || lub
-// ! negacja
-
-
-var name = "Przemek";
-var age = 33;
-
-
-if (age > 50)
+if (isWoman == true && age < 30)
 {
-    if (name == "Przemek")
-    {
-        Console.WriteLine("Jestem Przemek lub mam mniej niz 50 lat ");
-    }
-    
-
+    Console.WriteLine("Kobieta ponizej 30 lat");
 }
-else
+else if (name == "Ewa" && age == 30)
 {
-
-
-
-    Console.WriteLine(" 40 - 50 latek");
+    Console.WriteLine("Ewa lat 30");
+}
+else if (isWoman = false || age < 18)
+{
+    Console.WriteLine("Niepelnoletni mezczyna");
 }
