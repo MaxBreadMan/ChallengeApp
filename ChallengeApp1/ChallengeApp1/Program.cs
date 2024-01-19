@@ -1,6 +1,4 @@
 ﻿
-
-
 int number = 4594;
 string numberAsString = number.ToString();  
 char[] letters = numberAsString.ToCharArray();
