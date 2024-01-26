@@ -27,13 +27,6 @@
             }
         }
 
-        public int MaxResult
-        {
-            get
-            {
-                return (int)MaxResult;
-            }
-        }
 
 
         public void AddScore(int number)
