@@ -5,7 +5,7 @@ namespace ChallengeApp1.Test
     public class Tests
     {
         [Test]
-        public void WhenUserCollectPoints_ShouldReturnCorrectResult()
+        public void WhenUserCollectNegativePoints_ShouldReturnCorrectResult()
         {
             // arrange
             var Employee = new Employee("Adam", "adsadasda123412", "34");
@@ -21,7 +21,7 @@ namespace ChallengeApp1.Test
         }
 
         [Test]
-        public void WhenUserCollectPoints_ShouldReturnCorrectResult2()
+        public void WhenUserCollectMixedPoints_ShouldReturnCorrectResult()
         {
             // arrange
             var Employee = new Employee("Monika", "adsafd3412", "27");
@@ -35,7 +35,7 @@ namespace ChallengeApp1.Test
             Assert.AreEqual(20, result);
         }
         [Test]
-        public void WhenUserCollectPoints_ShouldReturnCorrectResult3()
+        public void WhenUserCollectPoints_ShouldReturnCorrectResult()
         {
             // arrange
             var Employee = new Employee("Tadeusz", "adgghtrsafd3412", "19");
