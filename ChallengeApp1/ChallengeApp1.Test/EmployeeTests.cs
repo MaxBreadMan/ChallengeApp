@@ -21,7 +21,7 @@ namespace ChallengeApp1.Test
         }
 
         [Test]
-        public void WhenUserCollectMixedPoints_ShouldReturnCorrectResult()
+        public void WhenUserCollectPoints_ShouldReturnCorrectResult()
         {
             // arrange
             var Employee = new Employee("Monika", "adsafd3412", "27");
@@ -35,7 +35,7 @@ namespace ChallengeApp1.Test
             Assert.AreEqual(20, result);
         }
         [Test]
-        public void WhenUserCollectPoints_ShouldReturnCorrectResult()
+        public void WhenUserCollectMixedPoints_ShouldReturnCorrectResult()
         {
             // arrange
             var Employee = new Employee("Tadeusz", "adgghtrsafd3412", "19");
