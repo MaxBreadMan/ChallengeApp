@@ -2,7 +2,7 @@ using System.Reflection.Metadata;
 
 namespace ChallengeApp1.Test
 {
-    public class Tests
+    public class EmployeeTests
     {
         [Test]
         public void WhenUserCollectNegativePoints_ShouldReturnCorrectResult()
