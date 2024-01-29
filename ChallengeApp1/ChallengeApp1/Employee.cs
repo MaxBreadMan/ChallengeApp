@@ -1,37 +1,45 @@
-﻿namespace ChallengeApp1
+﻿using System.Reflection.Metadata;
+
+namespace ChallengeApp1
 {
     public class Employee
     {
-        private List<int> score = new List<int>();
-
-        public Employee(string name, string surname, string age)
+        private List<float> grades = new List<float>();
+        public Employee(string name, string surname, string seniority)
         {
             this.Name = name;
             this.Surname = surname;
-            this.Age = age; 
-
+            this.Seniority = seniority;
         }
 
 
         public string Name { get; private set; }
 
-        public string Age { get; private set; }
-
         public string Surname { get; private set; }
 
-        public int Result
+        public string Seniority { get; private set; }
+
+        public void AddGrade(float grade)
         {
-            get
-            {
-                return (int)score.Average();
-            }
+            this.grades.Add(grade);
         }
 
 
-
-        public void AddScore(int number)
+        public Statistics GetStatistics()
         {
-            this.score.Add(number);
+            var statistics = new Statistics();
+            statistics.Average = 0;
+            statistics.Max = float.MinValue;
+            statistics.Min = float.MaxValue;
+
+            foreach (var grade in this.grades)
+            {
+                statistics.Max = Math.Max(statistics.Max, grade);
+                statistics.Min = Math.Min(statistics.Min, grade);
+                statistics.Average += grade;
+            }
+            statistics.Average /= this.grades.Count;
+            return statistics;
         }
     }
 }

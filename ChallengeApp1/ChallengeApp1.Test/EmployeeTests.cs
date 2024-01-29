@@ -2,52 +2,25 @@ using System.Reflection.Metadata;
 
 namespace ChallengeApp1.Test
 {
-    public class EmployeeTests
+    public class EmployeeTest
     {
         [Test]
-        public void WhenUserCollectNegativePoints_ShouldReturnCorrectResult()
+        public void WhenGetStatistic_ShouldReturnCorrectMaxMinAverageGrade()
         {
             // arrange
-            var Employee = new Employee("Adam", "adsadasda123412", "34");
-            Employee.AddScore(-5);
-            Employee.AddScore(-10);
-            Employee.AddScore(-25);
-            Employee.AddScore(-60);
-            Employee.AddScore(-60);
-            // act
-            var result = Employee.Result;
-            // assert
-            Assert.AreEqual(-32, result);
-        }
+            var Employee = new Employee("Adam", "Kamizelich", "10 lat");
+            Employee.AddGrade(2);
+            Employee.AddGrade(2);
+            Employee.AddGrade(6);
+            Employee.AddGrade(8);
 
-        [Test]
-        public void WhenUserCollectPoints_ShouldReturnCorrectResult()
-        {
-            // arrange
-            var Employee = new Employee("Monika", "adsafd3412", "27");
-            Employee.AddScore(5);
-            Employee.AddScore(10);
-            Employee.AddScore(55);
-            Employee.AddScore(10);
             // act
-            var result = Employee.Result;
+            var statistics = Employee.GetStatistics();
+
             // assert
-            Assert.AreEqual(20, result);
-        }
-        [Test]
-        public void WhenUserCollectMixedPoints_ShouldReturnCorrectResult()
-        {
-            // arrange
-            var Employee = new Employee("Tadeusz", "adgghtrsafd3412", "19");
-            Employee.AddScore(5);
-            Employee.AddScore(10);
-            Employee.AddScore(-55);
-            Employee.AddScore(10);
-            Employee.AddScore(85);
-            // act
-            var result = Employee.Result;
-            // assert
-            Assert.AreEqual(11, result);
+            Assert.That(statistics.Max, Is.EqualTo(8));
+            Assert.That(statistics.Min, Is.EqualTo(2));
+            Assert.That(statistics.Average, Is.EqualTo(4.5));
         }
     }
 }
