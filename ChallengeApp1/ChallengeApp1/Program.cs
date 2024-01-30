@@ -1,11 +1,16 @@
 ﻿using ChallengeApp1;
 
 var employee = new Employee("Adam", "Kamizelich", "10 lat");
-employee.AddGrade(2);
+employee.AddGrade("Adam");
+employee.AddGrade("4000");
+employee.AddGrade(1.5);
+employee.AddGrade(1000000000L);
+employee.AddGrade(54.99M);
 employee.AddGrade(2);
 employee.AddGrade(6);
-employee.AddGrade(8);
 var statistics = employee.GetStatistics();
+
+
 Console.WriteLine("Imie: " + employee.Name);
 Console.WriteLine("Nazwisko: " + employee.Surname);
 Console.WriteLine("Staz: " + employee.Seniority);

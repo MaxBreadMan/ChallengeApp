@@ -12,15 +12,14 @@ namespace ChallengeApp1.Test
             Employee.AddGrade(2);
             Employee.AddGrade(2);
             Employee.AddGrade(6);
-            Employee.AddGrade(8);
 
             // act
             var statistics = Employee.GetStatistics();
 
             // assert
-            Assert.That(statistics.Max, Is.EqualTo(8));
+            Assert.That(statistics.Max, Is.EqualTo(6));
             Assert.That(statistics.Min, Is.EqualTo(2));
-            Assert.That(statistics.Average, Is.EqualTo(4.5));
+            Assert.AreEqual(Math.Round(3.33, 2), Math.Round(statistics.Average, 2));
         }
     }
 }
