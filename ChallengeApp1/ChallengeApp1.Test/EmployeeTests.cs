@@ -19,7 +19,7 @@ namespace ChallengeApp1.Test
             // assert
             Assert.That(statistics.Max, Is.EqualTo(6));
             Assert.That(statistics.Min, Is.EqualTo(2));
-            Assert.AreEqual(Math.Round(3.33, 2), Math.Round(statistics.Average, 2));
+            Assert.That(Math.Round(statistics.Average, 2), Is.EqualTo(Math.Round(3.33, 2)));
         }
     }
 }
